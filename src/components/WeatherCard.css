@@ -1,0 +1,122 @@
+/* Base styling for the WeatherCard */
+.weather-card {
+    padding: 20px;
+    border-radius: 12px; /* Slightly rounded corners for a smoother look */
+    margin-top: 20px;
+    color: white; /* Text color for contrast */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Use Roboto for body text */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Softer, larger shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden; /* Prevent background image overflow */
+    height: 350px; /* Consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content */
+  }
+  
+  /* Hover effect */
+  .weather-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Specific background styles for each weather condition */
+  .weather-card.clear {
+    background-image: url('../../public/backgrounds/clear.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.cloudy {
+    background-image: url('../../public/backgrounds/cloudy.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.overcast {
+    background-image: url('../../public/backgrounds/overcast.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.fog {
+    background-image: url('../../public/backgrounds/fog.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.drizzle {
+    background-image: url('../../public/backgrounds/drizzle.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.rain {
+    background-image: url('../../public/backgrounds/rain.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.snow {
+    background-image: url('../../public/backgrounds/snow.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-card.thunderstorm {
+    background-image: url('../../public/backgrounds/thunderstorm.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Default background for undefined conditions */
+  .weather-card.default {
+    background-image: url('../../public/backgrounds/clear.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Typography for the card content */
+  .weather-card h2 {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+    font-size: 2rem; /* Larger font for the city name */
+    font-weight: 600; /* Bold for emphasis */
+    margin: 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for text readability */
+  }
+  
+  .weather-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 5px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Light shadow for better contrast */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .weather-card {
+      height: 280px; /* Smaller height for mobile */
+      padding: 15px;
+    }
+  
+    .weather-card h2 {
+      font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+  
+    .weather-card p {
+      font-size: 0.9rem; /* Adjust text size for mobile */
+    }
+  }
+  

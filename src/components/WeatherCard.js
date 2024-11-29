@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherCard.css";  // Import the CSS file for styling
 
 // Function to map weather condition codes to descriptive terms
 const getConditionDescription = (code) => {
@@ -29,37 +30,28 @@ const getConditionDescription = (code) => {
   return conditionMap[code] || "Unknown Condition";
 };
 
-// Function to map condition codes to background styles
-const getBackgroundStyle = (code) => {
+// Function to map condition codes to background styles (class names)
+const getBackgroundClass = (code) => {
   const backgroundMap = {
-    0: "clear.jpg",
-    1: "clear.jpg",
-    2: "cloudy.jpeg",
-    3: "overcast.jpeg",
-    45: "fog.jpeg",
-    48: "fog.jpeg",
-    51: "drizzle.jpeg",
-    61: "rain.jpeg",
-    71: "snow.jpeg",
-    80: "rain.jpeg",
-    95: "thunderstorm.jpeg",
+    0: "clear",
+    1: "clear",
+    2: "cloudy",
+    3: "overcast",
+    45: "fog",
+    48: "fog",
+    51: "drizzle",
+    61: "rain",
+    71: "snow",
+    80: "rain",
+    95: "thunderstorm",
   };
 
-  const imageName = backgroundMap[code] || "default.jpg";
-  return {
-    backgroundImage: `url(/backgrounds/${imageName})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    color: "white", // Adjust text color for better contrast
-    padding: "20px",
-    borderRadius: "8px",
-    marginTop: "20px",
-  };
+  return backgroundMap[code] || "default";
 };
 
 const WeatherCard = ({ data }) => {
   return (
-    <div style={getBackgroundStyle(data.condition)}>
+    <div className={`weather-card ${getBackgroundClass(data.condition)}`}>
       <h2>{data.city}</h2>
       <p>Temperature: {data.temperature}°C</p>
       <p>Wind Speed: {data.windSpeed} km/h</p>
