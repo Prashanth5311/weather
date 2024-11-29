@@ -24,7 +24,7 @@
   
   /* Specific background styles for each weather condition */
   .weather-card.clear {
-    background-image: url('../../public/backgrounds/clear.jpg');
+    background-image: url('../../public/backgrounds/clear2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
