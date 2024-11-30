@@ -1,19 +1,28 @@
-# Clone the repository 
+# Weather App 🌤️
+
+A simple, responsive weather application that provides real-time weather updates for any location using the Open Meteo API. Built with modern web technologies for an optimized user experience.
+
+## Features
+- **Real-time Weather Data**: Get accurate current weather for any location.
+- **Location Search**: Search weather data by city name using the Geocoding API.
+- **Responsive Design**: Works seamlessly on desktops, tablets, and mobile devices.
+- **Live Demo**: [Check it out here!](https://weather-chi-steel.vercel.app/)
+
+---
+
+## Installation Guide
+
+### Clone the Repository
+```bash
 git clone https://github.com/Prashanth5311/weather.git
+```
 
-### `npm install`
-install the libraries
-npm install
+### install dependencies
+```bash
+npm i
+```
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-
-### Deployment
-The Live Demo is available here : [https://weather-chi-steel.vercel.app/]
-
-# API used (Open Meteo) : [`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`]
-
-# API used (Geo Coding) : [`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`]
+### start the project 
+```bash
+npm start
+```
